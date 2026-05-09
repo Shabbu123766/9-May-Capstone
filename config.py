@@ -1,3 +1,10 @@
+import os
+
 class Config:
-    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:Shabbu%40123@localhost/libtrack'
+
+    SQLALCHEMY_DATABASE_URI = os.getenv(
+        "DATABASE_URL",
+        "sqlite:///libtrack.db"
+    )
+
     SQLALCHEMY_TRACK_MODIFICATIONS = False
