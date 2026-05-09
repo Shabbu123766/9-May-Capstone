@@ -10,6 +10,9 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    env:
+      DATABASE_URL: sqlite:///libtrack.db
+
     steps:
 
     - name: Checkout Repository
